@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="head-orange" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 L11 6 L1 11 z" fill="#e96f4c"/>
+    </marker>
+    <marker id="head-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 L11 6 L1 11 z" fill="#05825f"/>
+    </marker>
+  </defs>
+
+  <!-- Source: managed DBaaS holding 10 TB -->
+  <rect x="8" y="8" width="250" height="244" rx="6" fill="#fff" stroke="#136a7f" stroke-width="2.5"/>
+  <path d="M75 64 v110 a60 16 0 0 0 120 0 v-110" fill="#e7c568" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="135" cy="64" rx="60" ry="16" fill="#f0d68a" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="135" y="128" text-anchor="middle" font-size="30" font-weight="bold" fill="#136a7f">10 TB</text>
+  <text x="135" y="154" text-anchor="middle" font-size="15" fill="#136a7f">Postgres</text>
+  <text x="248" y="243" text-anchor="end" font-size="17" font-weight="bold" fill="#136a7f">Managed DBaaS</text>
+
+  <!-- Destination: your own CloudNativePG cluster -->
+  <rect x="642" y="8" width="250" height="244" rx="6" fill="#fff" stroke="#136a7f" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <path d="M705 64 v110 a60 16 0 0 0 120 0 v-110" fill="none" stroke="#136a7f" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <ellipse cx="765" cy="64" rx="60" ry="16" fill="none" stroke="#136a7f" stroke-width="2.5" stroke-dasharray="6 5"/>
+  <text x="765" y="134" text-anchor="middle" font-size="18" fill="#136a7f">Where you</text>
+  <text x="765" y="157" text-anchor="middle" font-size="18" fill="#136a7f">want to go</text>
+  <text x="882" y="243" text-anchor="end" font-size="17" font-weight="bold" fill="#136a7f">Your Kubernetes</text>
+
+  <!-- Path 1: pg_dump, open but slow -->
+  <line x1="266" y1="82" x2="634" y2="82" stroke="#e96f4c" stroke-width="6" marker-end="url(#head-orange)"/>
+  <text x="450" y="60" text-anchor="middle" font-size="17" font-weight="bold" fill="#e96f4c">pg_dump (logical export)</text>
+  <g transform="translate(372 108)" stroke="#e96f4c" stroke-width="2.5" fill="#fff">
+    <circle cx="0" cy="0" r="11"/>
+    <path d="M0 -6 V0 L5 3" fill="none"/>
+  </g>
+  <text x="392" y="114" font-size="16" fill="#e96f4c">hours or days offline</text>
+
+  <!-- Path 2: physical replication, blocked by the wall -->
+  <line x1="266" y1="190" x2="462" y2="190" stroke="#05825f" stroke-width="5" stroke-dasharray="14 9" marker-end="url(#head-green)"/>
+  <line x1="528" y1="190" x2="634" y2="190" stroke="#bfbfbf" stroke-width="5" stroke-dasharray="14 9"/>
+  <text x="364" y="166" text-anchor="middle" font-size="16" font-weight="bold" fill="#05825f">physical replication</text>
+  <text x="364" y="222" text-anchor="middle" font-size="16" fill="#05825f">(the WAL stream)</text>
+
+  <!-- The wall -->
+  <g>
+    <rect x="466" y="140" width="58" height="100" fill="#28495a"/>
+    <g stroke="#ffffff" stroke-width="2" stroke-opacity="0.55">
+      <line x1="466" y1="165" x2="524" y2="165"/>
+      <line x1="466" y1="190" x2="524" y2="190"/>
+      <line x1="466" y1="215" x2="524" y2="215"/>
+      <line x1="495" y1="140" x2="495" y2="165"/>
+      <line x1="480" y1="165" x2="480" y2="190"/>
+      <line x1="510" y1="165" x2="510" y2="190"/>
+      <line x1="495" y1="190" x2="495" y2="215"/>
+      <line x1="480" y1="215" x2="480" y2="240"/>
+      <line x1="510" y1="215" x2="510" y2="240"/>
+    </g>
+  </g>
+  <text x="580" y="222" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">not permitted</text>
+</svg>

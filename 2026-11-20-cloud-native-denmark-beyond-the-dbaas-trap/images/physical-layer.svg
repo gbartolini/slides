@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Arial, Helvetica, sans-serif">
+  <!-- Kubernetes cluster -->
+  <rect x="8" y="8" width="884" height="338" rx="8" fill="#ffffff" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="880" y="336" text-anchor="end" font-size="19" font-weight="bold" fill="#136a7f">Kubernetes cluster</text>
+
+  <!-- Services -->
+  <rect x="24" y="24" width="240" height="42" rx="8" fill="#d6e8f7" stroke="#6198b8" stroke-width="2"/>
+  <text x="144" y="50" text-anchor="middle" font-size="17" fill="#136a7f">Service (read-write)</text>
+  <rect x="274" y="24" width="490" height="42" rx="8" fill="#eaf3fb" stroke="#6198b8" stroke-width="2"/>
+  <text x="519" y="50" text-anchor="middle" font-size="17" fill="#136a7f">Service (read-only)</text>
+
+  <rect x="24" y="84" width="240" height="226" rx="6" fill="none" stroke="#bfbfbf" stroke-width="2" stroke-dasharray="3 5"/>
+  <text x="252" y="302" text-anchor="end" font-size="15" fill="#8a8a8a">Availability Zone</text>
+  <rect x="44" y="98" width="200" height="176" rx="6" fill="#ffffff" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="236" y="266" text-anchor="end" font-size="16" fill="#136a7f">Node</text>
+  <rect x="69" y="112" width="150" height="52" rx="8" fill="#136a7f" stroke="#ffffff" stroke-width="0"/>
+  <text x="144" y="134" text-anchor="middle" font-size="15" fill="#ffffff">Postgres</text>
+  <text x="144" y="153" text-anchor="middle" font-size="15" fill="#ffffff">primary pod</text>
+  <line x1="144" y1="164" x2="144" y2="186" stroke="#136a7f" stroke-width="2" stroke-dasharray="3 5"/>
+  <path d="M104 196 v38 a40 11 0 0 0 80 0 v-38" fill="#e7c568" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="144" cy="196" rx="40" ry="11" fill="#f0d68a" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="144" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#136a7f">PVC</text>
+  <line x1="144" y1="66" x2="144" y2="112" stroke="#136a7f" stroke-width="3.5"/>
+  <rect x="274" y="84" width="240" height="226" rx="6" fill="none" stroke="#bfbfbf" stroke-width="2" stroke-dasharray="3 5"/>
+  <text x="502" y="302" text-anchor="end" font-size="15" fill="#8a8a8a">Availability Zone</text>
+  <rect x="294" y="98" width="200" height="176" rx="6" fill="#ffffff" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="486" y="266" text-anchor="end" font-size="16" fill="#136a7f">Node</text>
+  <rect x="319" y="112" width="150" height="52" rx="8" fill="#6198b8" stroke="#ffffff" stroke-width="0"/>
+  <text x="394" y="134" text-anchor="middle" font-size="15" fill="#ffffff">Postgres</text>
+  <text x="394" y="153" text-anchor="middle" font-size="15" fill="#ffffff">standby pod</text>
+  <line x1="394" y1="164" x2="394" y2="186" stroke="#136a7f" stroke-width="2" stroke-dasharray="3 5"/>
+  <path d="M354 196 v38 a40 11 0 0 0 80 0 v-38" fill="#e7c568" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="394" cy="196" rx="40" ry="11" fill="#f0d68a" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="394" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#136a7f">PVC</text>
+  <line x1="394" y1="66" x2="394" y2="112" stroke="#136a7f" stroke-width="2" stroke-dasharray="3 5"/>
+  <rect x="524" y="84" width="240" height="226" rx="6" fill="none" stroke="#bfbfbf" stroke-width="2" stroke-dasharray="3 5"/>
+  <text x="752" y="302" text-anchor="end" font-size="15" fill="#8a8a8a">Availability Zone</text>
+  <rect x="544" y="98" width="200" height="176" rx="6" fill="#ffffff" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="736" y="266" text-anchor="end" font-size="16" fill="#136a7f">Node</text>
+  <rect x="569" y="112" width="150" height="52" rx="8" fill="#6198b8" stroke="#ffffff" stroke-width="0"/>
+  <text x="644" y="134" text-anchor="middle" font-size="15" fill="#ffffff">Postgres</text>
+  <text x="644" y="153" text-anchor="middle" font-size="15" fill="#ffffff">standby pod</text>
+  <line x1="644" y1="164" x2="644" y2="186" stroke="#136a7f" stroke-width="2" stroke-dasharray="3 5"/>
+  <path d="M604 196 v38 a40 11 0 0 0 80 0 v-38" fill="#e7c568" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="644" cy="196" rx="40" ry="11" fill="#f0d68a" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="644" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#136a7f">PVC</text>
+  <line x1="644" y1="66" x2="644" y2="112" stroke="#136a7f" stroke-width="2" stroke-dasharray="3 5"/>
+
+  <!-- Operator -->
+  <rect x="784" y="24" width="94" height="286" rx="8" fill="#28495a"/>
+  <image x="805" y="36" width="52" height="52" href="data:image/png;base64,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"/>
+  <text transform="translate(838 110) rotate(90)" font-size="18" font-weight="bold" fill="#ffffff">CloudNativePG</text>
+  <text transform="translate(862 110) rotate(90)" font-size="15" fill="#ffffff">(operator)</text>
+
+  <!-- Control plane -->
+  <rect x="8" y="360" width="884" height="50" rx="8" fill="#eef4f6" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="450" y="392" text-anchor="middle" font-size="19" fill="#136a7f">Kubernetes Control Plane</text>
+</svg>

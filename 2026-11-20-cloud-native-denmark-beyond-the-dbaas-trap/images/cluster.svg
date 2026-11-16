@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="head-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 L11 6 L1 11 z" fill="#05825f"/>
+    </marker>
+    <marker id="head-teal" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 L11 6 L1 11 z" fill="#136a7f"/>
+    </marker>
+  </defs>
+
+  <!-- CloudNativePG cluster boundary -->
+  <rect x="8" y="50" width="520" height="232" rx="8" fill="#ffffff" stroke="#136a7f" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <text x="20" y="272" font-size="17" font-weight="bold" fill="#136a7f">CloudNativePG cluster</text>
+
+  <!-- Primary -->
+  <path d="M70 148 v62 a52 14 0 0 0 104 0 v-62" fill="#e7c568" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="122" cy="148" rx="52" ry="14" fill="#f0d68a" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="122" y="194" text-anchor="middle" font-size="18" font-weight="bold" fill="#136a7f">Primary</text>
+
+  <!-- Replicas -->
+  <path d="M348 92 v46 a46 12 0 0 0 92 0 v-46" fill="#f6e7b8" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="394" cy="92" rx="46" ry="12" fill="#faefcf" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="394" y="130" text-anchor="middle" font-size="17" fill="#136a7f">Replica</text>
+
+  <path d="M348 190 v46 a46 12 0 0 0 92 0 v-46" fill="#f6e7b8" stroke="#136a7f" stroke-width="2.5"/>
+  <ellipse cx="394" cy="190" rx="46" ry="12" fill="#faefcf" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="394" y="228" text-anchor="middle" font-size="17" fill="#136a7f">Replica</text>
+
+  <!-- Streaming replication (continuous): solid green elbow connectors -->
+  <g fill="none" stroke="#05825f" stroke-width="4">
+    <path d="M182 178 H232"/>
+    <path d="M232 213 V115" stroke-linecap="square"/>
+    <path d="M232 115 H336" marker-end="url(#head-green)"/>
+    <path d="M232 213 H336" marker-end="url(#head-green)"/>
+  </g>
+  <text x="290" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#05825f">streaming</text>
+  <text x="290" y="178" text-anchor="middle" font-size="14" font-weight="bold" fill="#05825f">replication</text>
+  <text x="290" y="196" text-anchor="middle" font-size="13" fill="#05825f">continuous</text>
+
+  <!-- Object storage -->
+  <rect x="640" y="70" width="250" height="150" rx="8" fill="#eef4f6" stroke="#136a7f" stroke-width="2.5"/>
+  <text x="765" y="106" text-anchor="middle" font-size="20" font-weight="bold" fill="#136a7f">Object storage</text>
+  <rect x="664" y="124" width="202" height="30" rx="5" fill="#ffffff" stroke="#136a7f" stroke-width="1.5"/>
+  <text x="765" y="145" text-anchor="middle" font-size="16" fill="#136a7f">WAL archive</text>
+  <rect x="664" y="164" width="202" height="30" rx="5" fill="#ffffff" stroke="#136a7f" stroke-width="1.5"/>
+  <text x="765" y="185" text-anchor="middle" font-size="16" fill="#136a7f">Base backups</text>
+  <text x="765" y="246" text-anchor="middle" font-size="17" font-weight="bold" fill="#05825f">point-in-time recovery</text>
+
+  <!-- WAL archiving (asynchronous): dashed teal, routed over the top -->
+  <path d="M122 134 V44 H765 V64" fill="none" stroke="#136a7f" stroke-width="4" stroke-dasharray="3 9" stroke-linecap="round" marker-end="url(#head-teal)"/>
+  <text x="440" y="16" text-anchor="middle" font-size="16" font-weight="bold" fill="#136a7f">WAL archiving</text>
+  <text x="440" y="34" text-anchor="middle" font-size="14" fill="#136a7f">batched</text>
+</svg>
