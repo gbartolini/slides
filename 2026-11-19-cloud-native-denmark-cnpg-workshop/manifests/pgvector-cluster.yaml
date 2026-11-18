@@ -1,0 +1,20 @@
+# Extensions with an image catalog: pgvector on PostgreSQL 18, no custom image.
+# Source: CNPG Recipe 26, "extension image catalogs"
+# https://www.gabrielebartolini.it/articles/2026/08/cnpg-recipe-26-extension-image-catalogs/
+# The playground deploys the postgresql-minimal-trixie ClusterImageCatalog.
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pgvector
+spec:
+  imageCatalogRef:
+    apiGroup: postgresql.cnpg.io
+    kind: ClusterImageCatalog
+    name: postgresql-minimal-trixie
+    major: 18
+  instances: 3
+  storage:
+    size: 1Gi
+  postgresql:
+    extensions:
+      - name: pgvector

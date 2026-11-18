@@ -1,0 +1,11 @@
+# Exercise: deploy your own cluster
+# Adapted from the book "PostgreSQL on Kubernetes", Chapter 3.
+# Apply it in the EU cluster, next to the demo: kubectl apply -f pg.yaml
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg
+spec:
+  instances: 3
+  storage:
+    size: 1Gi

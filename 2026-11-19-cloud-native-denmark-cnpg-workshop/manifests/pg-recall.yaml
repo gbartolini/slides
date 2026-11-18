@@ -1,0 +1,25 @@
+# Exercise: point-in-time recovery
+# Adapted from the book "PostgreSQL on Kubernetes", Chapter 8.
+# Replace targetTime with the timestamp you noted between the two inserts
+# (the output of `select now()`), in a format PostgreSQL accepts,
+# for example "2026-11-19 10:42:17.123456+00".
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg-recall
+spec:
+  instances: 1
+  storage:
+    size: 1Gi
+  bootstrap:
+    recovery:
+      source: pg
+      recoveryTarget:
+        targetTime: "2026-11-18 15:31:41.074993+00"
+  externalClusters:
+  - name: pg
+    plugin:
+      name: barman-cloud.cloudnative-pg.io
+      parameters:
+        barmanObjectName: objectstore-eu
+        serverName: pg

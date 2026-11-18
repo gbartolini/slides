@@ -1,0 +1,15 @@
+# Extensions: the Database resource.
+# Run CREATE EXTENSION in the app database of the pgvector cluster.
+# Source: CNPG Recipe 26, "extension image catalogs".
+apiVersion: postgresql.cnpg.io/v1
+kind: Database
+metadata:
+  name: pgvector-app
+spec:
+  name: app
+  owner: app
+  cluster:
+    name: pgvector
+  extensions:
+  - name: vector
+    version: '0.8.7'

@@ -1,0 +1,19 @@
+# 1.31: a DatabaseRole that creates and rotates its own password.
+# Source: CNPG Recipe 28 (needs CloudNativePG 1.31, or a development build)
+# https://www.gabrielebartolini.it/articles/2026/10/cnpg-recipe-28-generated-and-rotating-postgresql-user-passwords-in-cloudnativepg-1.31/
+# Applied here to the `pg` cluster of the workshop.
+# Rotate now: kubectl annotate databaserole angus cnpg.io/rotatePassword=now
+apiVersion: postgresql.cnpg.io/v1
+kind: DatabaseRole
+metadata:
+  name: angus
+spec:
+  cluster:
+    name: pg
+  name: angus
+  login: true
+  password:
+    mode: generate
+    duration: 720h
+    renewBefore: 24h
+  databaseRoleReclaimPolicy: delete

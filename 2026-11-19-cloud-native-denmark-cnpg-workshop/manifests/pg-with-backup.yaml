@@ -1,0 +1,18 @@
+# Exercise: archive WAL from your own cluster
+# The same `pg` cluster, now archiving WAL to the demo's ObjectStore
+# (objectstore-eu) under its own serverName, so it never touches the
+# demo's own backups.
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: pg
+spec:
+  instances: 3
+  storage:
+    size: 1Gi
+  plugins:
+  - name: barman-cloud.cloudnative-pg.io
+    isWALArchiver: true
+    parameters:
+      barmanObjectName: objectstore-eu
+      serverName: pg
