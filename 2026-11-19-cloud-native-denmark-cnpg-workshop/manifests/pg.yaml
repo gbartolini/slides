@@ -6,6 +6,6 @@ kind: Cluster
 metadata:
   name: pg
 spec:
-  instances: 3
+  instances: 2
   storage:
     size: 1Gi

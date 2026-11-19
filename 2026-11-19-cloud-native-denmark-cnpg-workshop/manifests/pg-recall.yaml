@@ -1,4 +1,5 @@
 # Exercise: point-in-time recovery
+# Recovers from the archive of the demo cluster pg-eu.
 # Adapted from the book "PostgreSQL on Kubernetes", Chapter 8.
 # Replace targetTime with the timestamp you noted between the two inserts
 # (the output of `select now()`), in a format PostgreSQL accepts,
@@ -13,13 +14,13 @@ spec:
     size: 1Gi
   bootstrap:
     recovery:
-      source: pg
+      source: pg-eu
       recoveryTarget:
         targetTime: "2026-11-18 15:31:41.074993+00"
   externalClusters:
-  - name: pg
+  - name: pg-eu
     plugin:
       name: barman-cloud.cloudnative-pg.io
       parameters:
         barmanObjectName: objectstore-eu
-        serverName: pg
+        serverName: pg-eu

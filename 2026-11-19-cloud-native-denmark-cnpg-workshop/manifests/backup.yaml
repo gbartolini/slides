@@ -1,13 +1,14 @@
 # Exercise: take a backup
+# On the demo cluster pg-eu.
 # Adapted from the book "PostgreSQL on Kubernetes", Chapter 8.
 # Then: kubectl apply -f backup.yaml && kubectl get backup -w
 apiVersion: postgresql.cnpg.io/v1
 kind: Backup
 metadata:
-  name: pg-backup
+  name: pg-eu-backup
 spec:
   cluster:
-    name: pg
+    name: pg-eu
   method: plugin
   pluginConfiguration:
     name: barman-cloud.cloudnative-pg.io
